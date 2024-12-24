@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>멤버 등록</title>
+    <link rel="stylesheet" href="signup.css">
 </head>
 
 <body>
     <div class="container">
-        <fieldset>
-            <legend class="header">멤버등록</legend>
+            <h1 class="header">멤버등록</h1>
             <!-- 이미지등록 -->
             <div>
                 <label for="user_image">프로필 이미지 업로드:</label>
                 <input type="file" id="user_image" name="user_image" accept="image/*">
+                <div id="preview-container">
+                    <img id="image-preview" src="#" alt="이미지 미리보기">
+                </div>
             </div>
             <!-- 정보입력 -->
             <ul>
@@ -34,7 +37,6 @@
             </div>
             <!-- 등록버튼 -->
             <button type="submit" id="signup_btn">등록</button>
-        </fieldset>
     </div>
 </body>
 
