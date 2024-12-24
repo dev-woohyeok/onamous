@@ -9,3 +9,19 @@
     background-size: cover;
     background-position: center;
 }
+
+.container {
+    /* width: 1000px;
+    height: 600px; */
+    background-color: #393e46;
+    position: absolute;
+    top: 600px;
+    left: 550px;
+    font-size: 40px;
+    color: white;
+    margin-left: 50px;
+}
+
+.navbar {
+    height: 100px;
+}
