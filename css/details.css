@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    margin: 50px;
+    line-height: 1.5em;
+}
+
+.modal-header {
+    text-align: center;
+    justify-content: center;
+}
+
+.modal-body {
+    text-align: left;
+}
+
+.modal-btm {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.modal {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.modal-content {
+    background-color: white;
+    width: 350px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    animation: slidefade 0.35s linear;
+}
+
+.modal-content img {
+    display: block;
+    margin: 20px auto;
+}
+
+.btn-guide {
+    background-color: #616bee;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px;
+    display: block;
+    margin-top: 15px;
+}
+
+.btn-close {
+    font-size: 2.5em;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.modal.active {
+    display: block;
+}
+
+@keyframes slidefade {
+    0% {
+        opacity: 0;
+        margin-top: -100px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
