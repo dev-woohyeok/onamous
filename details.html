@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+
+<body>
+
+    <a href="#none" onclick="openModal()">Open Fade-In Modal</a>
+
+    <div id="modal-notice" class="modal">
+        <div class="modal-content">
+            <a class="btn-close" onclick="closeModal()" href="#none">x</a>
+            <div class="modal-header">
+                <img src="#none">
+                <h2>이름</h2>
+                <div class="modal-body">
+                    <h4>MBTI : </h4>
+                    <h4>취미 : </h4>
+                    <h4>장점 : </h4>
+                    <p>
+                        간단한 자기소개 및 협업 스타일
+                    </p>
+                </div>
+                <div class="modal-btm">
+                    <a class="btn-guide" href="#none">입력하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let modal = document.getElementById('modal-notice');
+
+        function openModal() {
+            modal.classList.add('active')
+        }
+        function closeModal() {
+            modal.classList.remove('active')
+        }
+    </script>
+
+</body>
+
+</html>
