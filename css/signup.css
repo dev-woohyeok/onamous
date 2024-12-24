@@ -1,8 +1,9 @@
 /* 공통 스타일 */
-*{
+* {
     box-sizing: border-box;
     /* 박스의 사이즈 관리 프로퍼티 / 디폴트는 컨텐트박스 */
 }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image:url('https://pbs.twimg.com/media/EiYSpYGUMAAa9K6?format=jpg&name=large');
+    background-image: url('https://pbs.twimg.com/media/EiYSpYGUMAAa9K6?format=jpg&name=large');
 }
 
 .container {
@@ -34,10 +35,20 @@ h1 a {
     color: #333;
     font-size: 24px;
 }
-#image-preview{
-    max-width: 100%; 
-    margin-top: 10px; 
-    border-radius: 8px;
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#image-preview {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 50px;
+    margin: 10px;
 }
 
 /* 필드셋 및 레전드 */
@@ -49,7 +60,7 @@ legend.header {
 }
 
 /* 이미지 업로드 */
-div > label {
+div>label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
@@ -58,6 +69,11 @@ div > label {
 input[type="file"] {
     display: block;
     margin-bottom: 20px;
+}
+
+/* forcus시 placeholder 안보이게 */
+input:focus::-webkit-input-placeholder {
+    color: transparent;
 }
 
 /* 정보 입력 */
@@ -93,8 +109,12 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
-    
 }
+
+textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
 
 /* 버튼 */
 button#signup_btn {
