@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/board.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <title>News</title>
+</head>
+
+<body>
+
+</body>
+    <header class="header">
+        <div>
+            <p>오남어스</p>
+        </div>
+        <ul class="nav">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="signup.html">MEMBER</a></li>
+            <li><a href="board.html">BOARD</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="container">
+            <div class="post_list">
+            </div>
+            <div class="wrapper_btn">
+                <div class="wrapper_input">
+                    <input placeholder="작성자" type="text" class="input_writer" maxlength="8">
+                    <input placeholder="내용" type="text" class="input_text" maxlength="100"/>
+                </div>
+                <button onclick=onclick="data_create(event)" class="btn btn_write">작성</button>
+            </div>
+        </div>
+    </main>
+</html>
+<script src="/js/board.js"></script>
