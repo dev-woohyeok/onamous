@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    background-color: purple;
+    gap: 2rem;
+    height: 200px
+}
+
+header div {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+    margin: 0 2rem 0 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav li {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 2rem;
+    border: .25rem solid white;
+    padding: 1rem;
+}
+
+.nav a {
+    color: white;
+
+}
