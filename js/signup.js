@@ -3,6 +3,11 @@ const imagePreview = document.getElementById('image-preview');
 const previewContainer = document.getElementById('preview-container');
 const DEFAULT_IMAGE_URL = 'https://i.namu.wiki/i/ZMSq7HebmcYJzC7r6J0hlXMc6mYC8jcIZ4Pw6LBqn_YI0CcSB75JbKX541Vs2CCpCtAl0-UWyve08s4ZdNEiPg.webp'
 
+document.addEventListener('DOMContentLoaded',()=>{
+    imagePreview.src = DEFAULT_IMAGE_URL; // 기본 이미지로 설정
+    imagePreview.style.display = 'block'; 
+    imageInput.style.display = 'none'; 
+})
 // 이미지 업로드 이벤트
 imagePreview.addEventListener('click', () => {
     imageInput.click(); // 파일 선택
@@ -51,7 +56,7 @@ function validateInputs(userName, userMBTI, userGit, userBlog, userIntroduce) {
     }
 
     if (userIntroduce.length > 100) {
-        alert('자기소개는 100자 이내로 작성해주세요.');
+        alert('자기소개는 100자 이하로 작성해주세요.');
         return false;
     }
 

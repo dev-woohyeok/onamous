@@ -10,14 +10,14 @@ function init() {
     // 데이터를 가져옵니다.
     const boards = data_read();
     // 게시글을 표시할 HTML 요소를 선택합니다.
-    const post_list = document.querySelector(".post_list");
+    const postList = document.querySelector(".post_list");
 
     // 기존에 표시된 게시글을 초기화 (모두 삭제)합니다.
-    post_list.innerHTML = "";
+    postList.innerHTML = "";
 
     // 저장된 데이터를 반복하면서 화면에 게시글 요소를 생성합니다.
     boards.forEach(({ writer, content }, idx) => {
-        create_post_element(post_list, writer, content, idx);
+        create_post_element(postList, writer, content, idx);
     });
 }
 

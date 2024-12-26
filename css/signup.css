@@ -68,14 +68,7 @@ ul{
 textarea {
     width: 100%;
     height: 180px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
     font-weight: bold;
-}
-input:focus::-webkit-input-placeholder {
-    color: transparent;
 }
 .nes-textarea{
     resize: none;
@@ -83,7 +76,9 @@ input:focus::-webkit-input-placeholder {
 textarea:focus::-webkit-input-placeholder {
     color: transparent;
 }
-
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
 /* 버튼 */
 button.is-primary {
     width: 100%;

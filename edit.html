@@ -1,66 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>수정페이지</title>
-    <link rel="stylesheet" href="edit.css">
+    <title>멤버 등록</title>
+    <link rel="stylesheet" href="/css/edit.css">
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    </style>
 </head>
+
 <body>
     <div class="container">
-        <!-- 이미지섹션 -->
-        <div class="img-section">
-            <div class="img-pic">
-                <input type="file" class="img" id="img" accept="image/*" style="display: none;">
-                <img src="#" id="preview" alt="Image Preview">
+        <h1 class="title">멤버등록</h1>
+        <!-- 이미지등록 -->
+        <div class="img-container">
+            <label for="user_image">프로필 이미지</label>
+            <input type="file" id="user_image" name="user_image" accept="image/*">
+            <div id="preview-container">
+                <img id="image-preview" src="#" alt="이미지 미리보기">
             </div>
         </div>
-
-        <!-- 이름 섹션 -->
-        <div class="info-section">
-            <div class="info-text" id="name">
-                <input type="text" id="name-input" disabled>
+        <!-- 정보입력 -->
+        <ul>
+            <div class="nes-field">
+                <label for="name_field">이름</label>
+                <input type="text" id="name_field" class="nes-input">
             </div>
-            <div class="info-action">
-                <button type="button" id="namebtn">수정</button>
+            <div class="nes-field">
+                <label for="name_field">MBTI</label>
+                <input type="text" id="name_field" class="nes-input">
             </div>
-        </div>
-        <!-- MBTI 섹션 -->
-        <div class="info-section">
-            <div class="info-text" id="mbti">
-                <input type="text" id="mbti-input" disabled>
+            <div class="nes-field">
+                <label for="name_field">Github</label>
+                <input type="text" id="name_field" class="nes-input">
             </div>
-            <div class="info-action">
-                <button type="button" id="mbtibtn">수정</button>
+            <div class="nes-field">
+                <label for="name_field">Blog</label>
+                <input type="text" id="name_field" class="nes-input">
             </div>
-        </div>
-        <!-- git섹션 -->
-        <div class="info-section">
-            <div class="info-text" id="git">
-                <input type="text" id="git-input" disabled>
-            </div>
-            <div class="info-action">
-                <button type="button" id="gitbtn">수정</button>
-            </div>
-        </div>
-        <!-- blog 섹션 -->
-        <div class="info-section">
-            <div class="info-text" id="blog">
-                <input type="text" id="blog-input" disabled>
-            </div>
-            <div class="info-action">
-                <button type="button" id="blogbtn">수정</button>
-            </div>
-        </div>
+        </ul>
         <!-- 자기소개 -->
-        <div class="info-section">
-            <div class="info-text" id="introduce">
-                <textarea type="text" id="introduce-input"></textarea>
-            </div>
-            <div class="info-action">
-                <button type="button" id="introducebtn">수정</button>
-            </div>
+        <div>
+            <label for="textarea_field">자기소개</label>
+            <textarea name="introduce" id="introduce" class="nes-textarea" cols="40" rows="10"
+                placeholder="자기소개를 작성해주세요!"></textarea>
         </div>
+        <!-- 수정버튼 -->
+        <button type="button" class="nes-btn is-primary">수정</button>
+
     </div>
+
+    <script src="/js/edit.js"></script>
 </body>
+
 </html>
