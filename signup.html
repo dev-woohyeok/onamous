@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>멤버 등록</title>
     <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <h1 class="header">멤버등록</h1>
+        <h1 class="title">멤버등록</h1>
         <!-- 이미지등록 -->
         <div class="img-container">
             <label for="user_image">프로필 이미지</label>
@@ -21,21 +24,32 @@
         </div>
         <!-- 정보입력 -->
         <ul>
-            <li class="show_name">이름을 입력하세요</li>
-            <span><input type="text" name="user_name" id="user_name" placeholder="이름"></span>
-            <li class="show_name">MBTI를 입력하세요!</li>
-            <span><input type="text" name="user_mbti" id="user_mbti" placeholder="MBTI"></span>
-            <li class="show_name">github 주소를 입력하세요</li>
-            <span><input type="text" name="user_git" id="user_git" placeholder="git"></span>
-            <li class="show_name">Blog 주소를 입력하세요</li>
-            <span><input type="text" name="user_blog" id="user_blog" placeholder="blog"></span>
+            <div class="nes-field">
+                <label for="name_field">이름</label>
+                <input type="text" id="name_field" class="nes-input">
+            </div>
+            <div class="nes-field">
+                <label for="name_field">MBTI</label>
+                <input type="text" id="name_field" class="nes-input">
+            </div>
+            <div class="nes-field">
+                <label for="name_field">Github</label>
+                <input type="text" id="name_field" class="nes-input">
+            </div>
+            <div class="nes-field">
+                <label for="name_field">Blog</label>
+                <input type="text" id="name_field" class="nes-input">
+            </div>
         </ul>
         <!-- 자기소개 -->
         <div>
-            <textarea name="introduce" id="introduce" cols="40" rows="10" placeholder="자기소개를 작성해주세요!"></textarea>
+            <label for="textarea_field">자기소개</label>
+            <textarea name="introduce" id="introduce" class="nes-textarea" cols="40" rows="10"
+                placeholder="자기소개를 작성해주세요!"></textarea>
         </div>
         <!-- 등록버튼 -->
-        <button type="submit" id="signup_btn">등록</button>
+        <button type="button" class="nes-btn is-primary">등록</button>
+
     </div>
 
     <script src="/js/signup.js"></script>

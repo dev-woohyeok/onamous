@@ -5,34 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal</title>
-    <link rel="stylesheet" href="details.css">
-    <script src="details.js"></script>
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/details.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
 </head>
+
 <body>
 
-    <a href="#none" onclick="openModal()">Open Fade-In Modal</a>
+    <header class="header">
+        <div>
+            <p>오남어스</p>
+        </div>
+        <ul class="nav">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="signup.html">MEMBER</a></li>
+            <li><a href="board.html">BOARD</a></li>
+        </ul>
+    </header>
+    <main>
+<<<<<<< HEAD
+        <a href="#none" onclick="openModal()">멤버카드</a>
 
-    <div id="modal-notice" class="modal">
-        <div class="modal-content">
-            <a class="btn-close" onclick="closeModal()" href="#none">x</a>
-            <div class="modal-header">
-                <img src="#none">
-                <h2>이름</h2>
-                <div class="modal-body">
-                    <h4>MBTI : </h4>
-                    <h4>좋아하는것 : </h4>
-                    <h4>장점 : </h4>
-                    <h4>협업스타일 : </h4>
-                    <h4>Github : </h4>
-                    <h4>Blog : </h4>
-                </div>
-                <div class="modal-btm">
-                    <a class="btn-guide" href="#none">수정</a>
-                    <a class="btn-guide" href="#none">삭제</a>
+=======
+        <a href="#none" onclick="openModal()">Open Fade-In Modal</a>
+>>>>>>> 5d824d949f4ec1f92b7143a25f91997fdee248b6
+        <div id="modal-notice" class="modal">
+            <div class="modal-content">
+                <a class="btn-close" onclick="closeModal()" href="#none">x</a>
+                <div class="modal-header">
+                    <img src="./image/background.png">
+                    <h2>이름</h2>
+                    <div class="modal-body">
+                        <h4>MBTI : </h4>
+                        <h4>Github : </h4>
+                        <h4>Blog : </h4>
+                        <h4>자기소개 : </h4>
+                    </div>
+                    <div class="modal-btm">
+                        <button type="button" class="nes-btn is-primary">수정</button>
+                        <button type="button" class="nes-btn is-error">삭제</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </body>
-
+<script src="./js/details.js"></script>
 </html>

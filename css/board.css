@@ -10,15 +10,12 @@ main {
 
 .container {
     display: grid;
-    padding: 5rem;
+    padding: 2rem;
     border-radius: 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 250px;
     position: absolute;
-    top: 200px;
-    right: 200px;
-    left: 200px;
-    bottom: 200px;
+    inset: 4rem 6rem 4rem 6rem;
     border: .25rem white solid;
     color: white;
 }
@@ -36,11 +33,10 @@ main {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-    height: 250px;
+    height: 200px;
     border: 0.2rem solid white;
     border-radius: 0.8rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
     margin: 0 0 1rem 0;
     gap: 1rem;
 }
@@ -49,6 +45,7 @@ main {
     margin: 0;
     font-size: 3rem;
     font-weight: bold;
+    color: white
 }
 
 .post_content {
@@ -96,9 +93,8 @@ main {
     height: 50px;
     border: 0.2rem solid white;
     border-radius: 0.8rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: white;
 }
 
 .btn_delete {
@@ -109,9 +105,8 @@ main {
     height: 50px;
     border: 0.2rem solid white;
     border-radius: 0.8rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: white;
 }
 
 .wrapper_input {
@@ -127,8 +122,8 @@ main {
     outline-color: gray;
     font-size: 2rem;
     padding-left: 1rem;
-    width: 10%;
     border-radius: .5rem;
+    width: 10%;
 }
 
 .input_text {
