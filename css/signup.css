@@ -1,11 +1,15 @@
+@import "./node_modules/nes.css/css/nes.css";
 /* 공통 스타일 */
 * {
     box-sizing: border-box;
+    font-family: 'DungGeunMo';
     /* 박스의 사이즈 관리 프로퍼티 / 디폴트는 컨텐트박스 */
 }
-
+@font-face {
+    font-family: "DungGeunMo";         
+    src: url("/font/DungGeunMo.ttf"); 
+}
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -50,34 +54,53 @@ h1 a {
     border-radius: 50px;
     margin: 10px;
 }
-
-/* 필드셋 및 레전드 */
-legend.header {
-    font-size: 20px;
+ul{
+    padding: 0;
+}
+.nes-field{
     font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
 }
 
-/* 이미지 업로드 */
-div>label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input[type="file"] {
-    display: block;
+/* 자기소개 */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
-/* forcus시 placeholder 안보이게 */
-input:focus::-webkit-input-placeholder {
+textarea:focus::-webkit-input-placeholder {
     color: transparent;
 }
 
+
+/* 버튼 */
+button.is-primary {
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.is-primary:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+
+/* forcus시 placeholder 안보이게
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+} */
+
 /* 정보 입력 */
-ul {
+/* ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -100,35 +123,4 @@ li.show_name {
     font-size: 12px;
     color: #999;
     margin-bottom: 10px;
-}
-
-/* 자기소개 */
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-
-textarea:focus::-webkit-input-placeholder {
-    color: transparent;
-}
-
-
-/* 버튼 */
-button#signup_btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #333;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-button#signup_btn:hover {
-    background-color: #555;
-}
+} */

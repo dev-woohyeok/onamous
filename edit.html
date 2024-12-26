@@ -4,10 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>수정페이지</title>
+    <link rel="stylesheet" href="edit.css">
 </head>
 <body>
     <div class="container">
-        수정페이지입니다
+        <!-- 이미지섹션 -->
+        <div class="img-section">
+            <div class="img-pic">
+                <input type="file" class="img" id="img" accept="image/*" style="display: none;">
+                <img src="#" id="preview" alt="Image Preview">
+            </div>
+        </div>
+
+        <!-- 이름 섹션 -->
+        <div class="info-section">
+            <div class="info-text" id="name">
+                <input type="text" id="name-input" disabled>
+            </div>
+            <div class="info-action">
+                <button type="button" id="namebtn">수정</button>
+            </div>
+        </div>
+        <!-- MBTI 섹션 -->
+        <div class="info-section">
+            <div class="info-text" id="mbti">
+                <input type="text" id="mbti-input" disabled>
+            </div>
+            <div class="info-action">
+                <button type="button" id="mbtibtn">수정</button>
+            </div>
+        </div>
+        <!-- git섹션 -->
+        <div class="info-section">
+            <div class="info-text" id="git">
+                <input type="text" id="git-input" disabled>
+            </div>
+            <div class="info-action">
+                <button type="button" id="gitbtn">수정</button>
+            </div>
+        </div>
+        <!-- blog 섹션 -->
+        <div class="info-section">
+            <div class="info-text" id="blog">
+                <input type="text" id="blog-input" disabled>
+            </div>
+            <div class="info-action">
+                <button type="button" id="blogbtn">수정</button>
+            </div>
+        </div>
+        <!-- 자기소개 -->
+        <div class="info-section">
+            <div class="info-text" id="introduce">
+                <textarea type="text" id="introduce-input"></textarea>
+            </div>
+            <div class="info-action">
+                <button type="button" id="introducebtn">수정</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
