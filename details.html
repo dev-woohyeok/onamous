@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/details.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -24,15 +26,12 @@
         </ul>
     </header>
     <main>
-<<<<<<< HEAD
         <a href="#none" onclick="openModal()">멤버카드</a>
-
-=======
-        <a href="#none" onclick="openModal()">Open Fade-In Modal</a>
->>>>>>> 5d824d949f4ec1f92b7143a25f91997fdee248b6
         <div id="modal-notice" class="modal">
             <div class="modal-content">
-                <a class="btn-close" onclick="closeModal()" href="#none">x</a>
+                <a class="btn-close" onclick="closeModal()" href="#none">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
                 <div class="modal-header">
                     <img src="./image/background.png">
                     <h2>이름</h2>
@@ -43,8 +42,12 @@
                         <h4>자기소개 : </h4>
                     </div>
                     <div class="modal-btm">
-                        <button type="button" class="nes-btn is-primary">수정</button>
-                        <button type="button" class="nes-btn is-error">삭제</button>
+                        <button type="button" class="nes-btn is-primary">
+                            <i class="fa-solid fa-pen"></i> 수정
+                        </button>
+                        <button type="button" class="nes-btn is-error">
+                            <i class="fa-solid fa-trash-can"></i> 삭제
+                        </button>
                     </div>
                 </div>
             </div>

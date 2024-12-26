@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/custom.css">
     <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/custom.css">
     <title>Onamous</title>
 </head>
 <body>
@@ -27,10 +29,10 @@
             </div>
             <div class="wrapper_btn">
                 <div class="wrapper_input">
-                    <input placeholder="작성자" type="text" class="input_writer" maxlength="8">
-                    <input placeholder="내용" type="text" class="input_text" maxlength="100"/>
+                    <input id="writer" placeholder="작성자" type="text" class="input_writer" maxlength="8">
+                    <input id="content" placeholder="내용" type="text" class="input_text" maxlength="100"/>
                 </div>
-                <button onclick=onclick="data_create(event)" class="btn btn_write">작성</button>
+                <button id="submit" onclick="data_create()" class="btn btn_write">작성</button>
             </div>
         </div>
     </main>
