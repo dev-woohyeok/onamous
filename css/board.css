@@ -10,15 +10,12 @@ main {
 
 .container {
     display: grid;
-    padding: 5rem;
+    padding: 2rem;
     border-radius: 1rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 250px;
+    grid-template-rows: 1fr 150px;
     position: absolute;
-    top: 200px;
-    right: 200px;
-    left: 200px;
-    bottom: 200px;
+    inset: 4rem 6rem 4rem 6rem;
     border: .25rem white solid;
     color: white;
 }
@@ -36,7 +33,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-    height: 250px;
+    height: 200px;
     border: 0.2rem solid white;
     border-radius: 0.8rem;
     background-color: rgba(255, 255, 255, 0.1);
@@ -47,13 +44,13 @@ main {
 
 .post_writer {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .post_content {
     margin: 0.5rem 0 0 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -96,7 +93,7 @@ main {
     height: 50px;
     border: 0.2rem solid white;
     border-radius: 0.8rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: white;
 }
@@ -109,7 +106,7 @@ main {
     height: 50px;
     border: 0.2rem solid white;
     border-radius: 0.8rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: white;
 }
@@ -125,7 +122,7 @@ main {
     padding: .5rem 0 .5rem 0;
     flex: 1;
     outline-color: gray;
-    font-size: 2rem;
+    font-size: 1rem;
     padding-left: 1rem;
     width: 10%;
     border-radius: .5rem;
@@ -134,7 +131,7 @@ main {
 .input_text {
     flex: 4;
     outline-color: gray;
-    font-size: 2rem;
+    font-size: 1rem;
     padding-left: 1rem;
     width: 100%;
     border-radius: .5rem;
