@@ -123,6 +123,7 @@ function data_update(event) {
 function data_delete(event) {
     // 삭제할 게시글의 ID를 가져옵니다.
     const id = event.target.parentElement.dataset.id;
+    const modal = document.getElementById('dialog-default')
     // 로컬 스토리지에서 데이터를 가져옵니다.
     let boards = data_read();
 
@@ -162,7 +163,7 @@ function create_post_element(parent, writer, content, idx) {
 
     // 수정 버튼 생성
     const btn_update = document.createElement("button");
-    btn_update.classList.add("btn", "btn_update");
+    btn_update.classList.add("btn_update");
     btn_update.classList.add("nes-btn", "is-success");
     btn_update.textContent = "수정";
     // 수정 버튼 클릭 시 데이터 수정 함수 호출
@@ -170,8 +171,8 @@ function create_post_element(parent, writer, content, idx) {
 
     // 삭제 버튼 생성
     const btn_delete = document.createElement("button");
-    btn_delete.classList.add("btn", "btn_delete");
-    btn_delete.classList.add("nes-btn", "is-success");
+    btn_delete.classList.add("btn_delete");
+    btn_delete.classList.add("nes-btn", "is-error");
     btn_delete.textContent = "삭제";
     // 삭제 버튼 클릭 시 데이터 삭제 함수 호출
     btn_delete.addEventListener("click", data_delete);
