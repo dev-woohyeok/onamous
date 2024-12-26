@@ -19,6 +19,9 @@ body {
 
 .modal-btm {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 a {
@@ -37,14 +40,15 @@ a {
 
 .modal-content {
     background-color: white;
-    width: 350px;
-    border-radius: 10px;
+    width: 500px; /* 모달창 크기*/
+    max-width: 80%; /* 화면이 작을 때 너무 커지지 않도록 제한 */
+    border-radius: 10px; 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
-    padding: 30px;
+    padding: 40px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     animation: slidefade 0.35s linear;
 }
@@ -55,7 +59,7 @@ a {
 }
 
 .btn-guide {
-    background-color: #616bee;
+    background-color: #4e4f52;
     color: white;
     border-radius: 5px;
     font-size: 14px;
@@ -65,7 +69,8 @@ a {
 }
 
 .btn-close {
-    font-size: 2.5em;
+    color: #4e4f52;
+    font-size: 1.2em;
     position: absolute;
     top: 15px;
     right: 15px;
@@ -85,3 +90,5 @@ a {
         margin-top: 0;
     }
 }
+
+

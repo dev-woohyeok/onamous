@@ -1,7 +1,7 @@
 header {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
     background-color: purple;
     gap: 2rem;
     height: 200px
@@ -9,6 +9,7 @@ header {
 
 header div {
     display: flex;
+    width: 250px;
     font-size: 1.5rem;
     font-weight: bold;
     justify-content: center;
@@ -22,11 +23,8 @@ header p {
 
 .nav {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 1rem;
     align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
 }
 
 .nav li {
@@ -35,8 +33,20 @@ header p {
     margin: 2rem 4rem 2rem 4rem;
     border: .25rem solid white;
     padding: 1rem;
+
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .nav a {
-    color: white;
+    color: white
+}
+
+.nav li:hover {
+    background-color: white;
+}
+
+.nav li:hover a {
+    color: black;
 }
