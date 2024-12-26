@@ -148,6 +148,8 @@ function create_post_element(parent, writer, content, idx) {
     // 게시글 항목을 담을 새로운 div 요소 생성
     const postItem = document.createElement("div");
     postItem.classList.add("post_item"); // 클래스 추가
+    postItem.classList.add("nes-input");
+    postItem.classList.add("is-dark");
     postItem.dataset.id = idx; // ID를 데이터 속성으로 저장
 
     // 작성자 정보를 담을 요소 생성
@@ -162,14 +164,18 @@ function create_post_element(parent, writer, content, idx) {
 
     // 수정 버튼 생성
     const btn_update = document.createElement("button");
-    btn_update.classList.add("btn", "btn_update");
+    btn_update.classList.add("nes-btn");
+    btn_update.classList.add("btn_update");
+    btn_update.classList.add("is-primary");
     btn_update.textContent = "수정";
     // 수정 버튼 클릭 시 데이터 수정 함수 호출
     btn_update.addEventListener("click", data_update);
 
     // 삭제 버튼 생성
     const btn_delete = document.createElement("button");
-    btn_delete.classList.add("btn", "btn_delete");
+    btn_delete.classList.add("nes-btn");
+    btn_delete.classList.add("btn_delete");
+    btn_delete.classList.add("is-error");
     btn_delete.textContent = "삭제";
     // 삭제 버튼 클릭 시 데이터 삭제 함수 호출
     btn_delete.addEventListener("click", data_delete);
