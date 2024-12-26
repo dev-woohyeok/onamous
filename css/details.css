@@ -1,27 +1,46 @@
+@font-face {
+    font-family: "DungGeunMo";         
+    src: url("/font/DungGeunMo.ttf"); 
+}
+
+@keyframes slidefade {
+    0% {
+        opacity: 0;
+        margin-top: -100px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
 
-/* body {
-    font-size: 18px;
-    margin: 50px;
-    line-height: 1.5em;
-} */
-
 .modal-header {
     text-align: center;
     justify-content: center;
+    font-family: "DungGeunMo"; 
+}
+
+.modal-header img {
+    max-width: 100%;
+    height: auto;
 }
 
 .modal-body {
+    font-family: "DungGeunMo"; 
     text-align: left;
 }
 
 .modal-btm {
-    text-align: center;
     display: flex;
-    justify-content: center;
     gap: 10px;
+}
+
+.modal-btm button {
+    width: 100% 
 }
 
 a {
@@ -40,10 +59,10 @@ a {
 
 .modal-content {
     background-color: white;
-    width: 500px; /* 모달창 크기*/
-    max-width: 80%; /* 화면이 작을 때 너무 커지지 않도록 제한 */
+    width: 500px;
+    /* height: 700px; */
     border-radius: 10px; 
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -51,6 +70,7 @@ a {
     padding: 40px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     animation: slidefade 0.35s linear;
+    font-size: 20px;
 }
 
 .modal-content img {
@@ -58,19 +78,10 @@ a {
     margin: 20px auto;
 }
 
-.btn-guide {
-    background-color: #4e4f52;
-    color: white;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 5px;
-    display: block;
-    margin-top: 15px;
-}
-
 .btn-close {
     color: #4e4f52;
-    font-size: 1.2em;
+    font-family: "DungGeunMo"; 
+    font-size: 1em;
     position: absolute;
     top: 15px;
     right: 15px;
@@ -79,16 +90,4 @@ a {
 .modal.active {
     display: block;
 }
-
-@keyframes slidefade {
-    0% {
-        opacity: 0;
-        margin-top: -100px;
-    }
-    100% {
-        opacity: 1;
-        margin-top: 0;
-    }
-}
-
 

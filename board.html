@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />    <link rel="stylesheet" href="./css/custom.css">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/custom.css">
     <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -28,10 +29,10 @@
             </div>
             <div class="wrapper_btn">
                 <div class="wrapper_input">
-                    <input id="writer" class="input_writer" placeholder="작성자" type="text"  maxlength="8">
-                    <input id="content" class="input_text" placeholder="내용" type="text" maxlength="100"/>
+                    <input id="writer" placeholder="작성자" type="text" class="input_writer" maxlength="8">
+                    <input id="content" placeholder="내용" type="text" class="input_text" maxlength="100"/>
                 </div>
-                <button id="submit" onclick="data_create()" class="btn btn_write ne">작성</button>
+                <button id="submit" onclick="data_create()" class="btn btn_write">작성</button>
             </div>
         </div>
     </main>
