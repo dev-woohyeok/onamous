@@ -5,6 +5,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: "DungGeunMO";
+}
+
+@font-face {
+    font-family: "DungGeunMO";
+    src: url('/font/DungGeunMo.ttf');
 }
 
 main {
@@ -12,41 +18,76 @@ main {
     height: calc(100vh - 200px);
 }
 
-.boxtitle {
-    width: 260px;
-    height: 100px;
-    border: 1px solid blue;
-    position: absolute;
-    top: 5%;
-    left: 45%;
+header {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: purple;
+    gap: 2rem;
+    height: 200px
+}
+
+header div {
+    display: flex;
+    width: 250px;
+    font-size: 1.5rem;
+    font-weight: bold;
     justify-content: center;
     align-items: center;
 }
 
-.boxtitle p {
+header p {
     color: white;
-    margin: 0;
-    font-size: 2.5rem;
-    /* 박스 제목 애니메이션 */
-    animation: slideup 15s linear;
-    animation-fill-mode: forwards;
+    font-size: 3rem;
 }
 
-.textbox {
-    width: 1500px;
-    height: 600px;
-    border: 1px solid blue;
-    position: absolute;
-    top: 20%;
-    left: 14%;
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.textbox p {
-    font-size: 2rem;
-    color: white;
+.nav li {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 2rem 4rem 2rem 4rem;
+    border: .25rem solid white;
+    padding: .5rem 2rem .5rem 2rem;
+    border-radius: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav a {
+    color: white
+}
+
+.nav li:hover {
+    background-color: white;
+}
+
+.nav li:hover a {
+    color: black;
+}
+
+.nes-container {
+    width: 1300px;
+    height: 800px;
+    top: 5%;
+    left: 25%;
+}
+
+.nes-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.nes-balloon p {
+    font-size: 27px;
     /* 박스 상자속 텍스트 애니메이션 liner:처음부터 끝까지 일정한 속도로 진행 */
-    animation: slideup 15s linear;
+    animation: slideup 12s linear;
     /* 애니메이션이 완료된 후 요소는 마지막 상태(opacity: 1, margin-top: 0)를 유지한다.*/
     animation-fill-mode: forwards;
 }
@@ -76,47 +117,4 @@ main {
         /* 위치가 변하지 않고 유지된다. */
         margin-top: 0;
     }
-}
-
-.header {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 1fr;
-    background-color: purple;
-    gap: 2rem;
-    height: 200px
-}
-
-.header div {
-    display: flex;
-    font-size: 1.5rem;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-}
-
-.header p {
-    color: white;
-    font-size: 3rem;
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav li {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 2rem 4rem 2rem 4rem;
-    border: .25rem solid white;
-    padding: 1rem;
-}
-
-.nav a {
-    color: white;
 }
