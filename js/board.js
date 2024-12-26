@@ -6,17 +6,14 @@ init();
  */
 function init() {
     // 데이터 호출
-    const datas = JSON.parse(localStorage.getItem("datas")) || [];
+    const boards = data_read();
     const post_list = document.querySelector(".post_list");
 
     // 기존 데이터 렌더링
     post_list.innerHTML = ""; // 초기화
-    datas.forEach(({ writer, content }, idx) => {
-        createPostElement(post_list, writer, content, idx);
+    boards.forEach(({ writer, content }, idx) => {
+        create_post_element(post_list, writer, content, idx);
     });
-
-    // 이벤트 리스너 추가
-    document.querySelector("#btn_create").addEventListener("click", data_create);
 }
 
 /**
@@ -38,50 +35,53 @@ function validate(writer, content) {
  * 데이터 추가하기
  */
 function data_create() {
-    const writer = document.querySelector("#writer").value;
-    const content = document.querySelector("#content").value;
+    const writer = document.querySelector("#writer");
+    const content = document.querySelector("#content");
+    const submit = document.querySelector("#submit");
 
     // 유효성 검사
-    if (!validate(writer, content)) return;
-
-    // 데이터 추가
-    const datas = JSON.parse(localStorage.getItem("datas")) || [];
-    datas.push({ writer, content });
-    localStorage.setItem("datas", JSON.stringify(datas));
+    if (!validate(writer.value, content.value)) return;
+    const boards = data_read();
+    if(submit.textContent === "작성"){
+        // 데이터 추가
+        boards.push({ writer : writer.value, content : content.value });
+        localStorage.setItem("boards", JSON.stringify(boards));
+    }else{
+        // 데이터 수정
+        boards[submit.dataset.id] = { writer : writer.value, content : content.value };
+        localStorage.setItem("boards", JSON.stringify(boards));
+        submit.removeAttribute("data-id");
+    }
+    // 입력 필드 초기화
+    writer.value = "";
+    content.value = "";
+    submit.textContent = "작성";
 
     // 화면 업데이트
     init();
-
-    // 입력 필드 초기화
-    document.querySelector("#writer").value = "";
-    document.querySelector("#content").value = "";
 }
 
 /**
  * 데이터 불러오기
  */
 function data_read() {
-    return JSON.parse(localStorage.getItem("datas")) || [];
+    return JSON.parse(localStorage.getItem("boards")) || [];
 }
 
 /**
  * 데이터 수정하기
  */
 function data_update(event) {
+    const boards = JSON.parse(localStorage.getItem("boards"));
+    const writer = document.querySelector('#writer');
+    const content = document.querySelector('#content');
+    const submit = document.querySelector(`#submit`);
     const id = event.target.parentElement.dataset.id;
-    const datas = JSON.parse(localStorage.getItem("datas"));
 
-    const newWriter = prompt("새로운 작성자를 입력하세요.", datas[id].writer);
-    const newContent = prompt("새로운 내용을 입력하세요.", datas[id].content);
-
-    if (!validate(newWriter, newContent)) return;
-
-    // 데이터 업데이트
-    datas[id] = { writer: newWriter, content: newContent };
-    localStorage.setItem("datas", JSON.stringify(datas));
-
-    // 화면 업데이트
-    init();
+    submit.dataset.id = id;
+    writer.value = boards[id].writer;
+    content.value = boards[id].content;
+    submit.textContent = "수정";
 }
 
 /**
@@ -89,62 +89,18 @@ function data_update(event) {
  */
 function data_delete(event) {
     const id = event.target.parentElement.dataset.id;
-    let datas = JSON.parse(localStorage.getItem("datas"));
-
-      // 모달 생성
-    const modal = document.createElement("div");
-    modal.classList.add("modal");
-    modal.innerHTML = `
-        <div class="modal_content">
-            <p>정말 삭제하시겠습니까?</p>
-            <button id="btn_confirm_delete">확인</button>
-            <button id="btn_cancel_delete">취소</button>
-        </div>
-    `;
-
-    // 모달 스타일 (간단한 예시)
-    modal.style.position = "fixed";
-    modal.style.top = "0";
-    modal.style.left = "0";
-    modal.style.width = "100%";
-    modal.style.height = "100%";
-    modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-    modal.style.display = "flex";
-    modal.style.justifyContent = "center";
-    modal.style.alignItems = "center";
-    modal.style.zIndex = "1000";
-
-    const modalContent = modal.querySelector(".modal_content");
-    modalContent.style.backgroundColor = "white";
-    modalContent.style.padding = "2rem";
-    modalContent.style.borderRadius = "10px";
-    modalContent.style.textAlign = "center";
-
-    // 모달 추가
-    document.body.appendChild(modal);
-
-    // "확인" 버튼 클릭 시 삭제 진행
-    document.querySelector("#btn_confirm_delete").addEventListener("click", () => {
-        const updatedDatas = datas.filter((_, idx) => idx != id);
-        localStorage.setItem("datas", JSON.stringify(updatedDatas));
-
-        // 화면 업데이트
-        init();
-
-        // 모달 닫기
-        document.body.removeChild(modal);
-    });
-
-    // "취소" 버튼 클릭 시 모달 닫기
-    document.querySelector("#btn_cancel_delete").addEventListener("click", () => {
-        document.body.removeChild(modal);
-    });
+    let boards = JSON.parse(localStorage.getItem("boards"));
+    // 데이터 삭제
+    boards = boards.filter((_, idx) => idx != id);
+    localStorage.setItem("boards", JSON.stringify(boards));
+    // 화면 업데이트
+    init();
 }
 
 /**
  * 포스트 요소 생성
  */
-function createPostElement(parent, writer, content, idx) {
+function create_post_element(parent, writer, content, idx) {
     // 새로운 post_item 요소 생성
     const postItem = document.createElement("div");
     postItem.classList.add("post_item");

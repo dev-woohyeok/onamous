@@ -36,8 +36,7 @@ main {
     height: 200px;
     border: 0.2rem solid white;
     border-radius: 0.8rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
     margin: 0 0 1rem 0;
     gap: 1rem;
 }
