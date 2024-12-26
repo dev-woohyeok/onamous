@@ -13,7 +13,7 @@ main {
     padding: 2rem;
     border-radius: 1rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 250px;
+    grid-template-rows: 1fr 150px;
     position: absolute;
     inset: 4rem 6rem 4rem 6rem;
     border: .25rem white solid;
@@ -43,14 +43,14 @@ main {
 
 .post_writer {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: white
 }
 
 .post_content {
     margin: 0.5rem 0 0 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -120,7 +120,7 @@ main {
     padding: .5rem 0 .5rem 0;
     flex: 1;
     outline-color: gray;
-    font-size: 2rem;
+    font-size: 1rem;
     padding-left: 1rem;
     border-radius: .5rem;
     width: 10%;
@@ -129,7 +129,7 @@ main {
 .input_text {
     flex: 4;
     outline-color: gray;
-    font-size: 2rem;
+    font-size: 1rem;
     padding-left: 1rem;
     width: 100%;
     border-radius: .5rem;
