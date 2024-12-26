@@ -46,13 +46,16 @@ h1 a {
     align-items: center;
     flex-direction: column;
 }
-
+#user_image {
+    display: none;
+}
 #image-preview {
     width: 100px;
     height: 100px;
     margin-top: 10px;
     border-radius: 50px;
     margin: 10px;
+    border: 1px solid black;
 }
 ul{
     padding: 0;
@@ -64,14 +67,16 @@ ul{
 /* 자기소개 */
 textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
+    height: 180px;
     font-weight: bold;
 }
-
+.nes-textarea{
+    resize : none;
+}
 textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+input:focus::-webkit-input-placeholder {
     color: transparent;
 }
 
@@ -80,7 +85,6 @@ textarea:focus::-webkit-input-placeholder {
 button.is-primary {
     width: 100%;
     border-radius: 4px;
-    cursor: pointer;
     font-size: 16px;
 }
 
@@ -92,35 +96,3 @@ button.is-primary:hover {
 
 
 
-
-
-/* forcus시 placeholder 안보이게
-input:focus::-webkit-input-placeholder {
-    color: transparent;
-} */
-
-/* 정보 입력 */
-/* ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul span {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-li.show_name {
-    font-size: 12px;
-    color: #999;
-    margin-bottom: 10px;
-} */
