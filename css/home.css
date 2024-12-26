@@ -28,7 +28,8 @@ main {
     color: white;
     margin: 0;
     font-size: 2.5rem;
-    animation: slideup 6s linear;
+    /* 박스 제목 애니메이션 */
+    animation: slideup 15s linear;
     animation-fill-mode: forwards;
 }
 
@@ -44,28 +45,35 @@ main {
 .textbox p {
     font-size: 2rem;
     color: white;
-    animation: slideup 6s linear;
+    /* 박스 상자속 텍스트 애니메이션 liner:처음부터 끝까지 일정한 속도로 진행 */
+    animation: slideup 15s linear;
+    /* 애니메이션이 완료된 후 요소는 마지막 상태(opacity: 1, margin-top: 0)를 유지한다.*/
     animation-fill-mode: forwards;
 }
 
+/* 애니메이션의 단계별 동작을 정의하는 규칙  opacity: 투명도 0:투명,1:불투명*/
 @keyframes slideup {
     0% {
         opacity: 0;
+        /* 요소가 아래로 50px 떨어져 있다. */
         margin-top: 50px;
     }
 
     20% {
         opacity: 1;
+        /* 요소가 위로 슬라이드되면서 제자리에 도달한다. */
         margin-top: 0;
     }
 
     80% {
         opacity: 1;
+        /* 위치가 변하지 않고 유지된다. */
         margin-top: 0;
     }
 
     100% {
         opacity: 1;
+        /* 위치가 변하지 않고 유지된다. */
         margin-top: 0;
     }
 }

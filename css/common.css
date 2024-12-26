@@ -6,6 +6,11 @@
     text-decoration: none;
 }
 
+@font-face {
+    font-family:'DungGeunMo';
+    src: url('/font/DungGeunMo.ttf');
+}
+
 html,
 body {
     width: 100%;
@@ -16,6 +21,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 1fr;
+    font-family: "DungGeunMo";
 }
 
 
