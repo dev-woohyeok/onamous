@@ -1,0 +1,11 @@
+ul {
+    margin-bottom: 0; 
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.nes-input {
+    border-image-repeat: initial;
+}

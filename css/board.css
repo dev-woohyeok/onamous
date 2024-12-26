@@ -23,9 +23,9 @@ main {
 .post_list {
     border-bottom: 1px white solid;
     overflow: auto;
-    max-height: 100%;
+    width: 100%;
     margin-bottom: 2rem;        
-    padding: 0 0 .5rem 0;
+    padding: .5rem 1rem .5rem .5rem;
 }
 
 .post_item {
@@ -45,6 +45,7 @@ main {
     margin: 0;
     font-size: 2rem;
     font-weight: bold;
+    color: white
 }
 
 .post_content {
@@ -94,7 +95,6 @@ main {
     border-radius: 0.8rem;
     font-size: 1.4rem;
     font-weight: bold;
-    color: white;
 }
 
 .btn_delete {
@@ -107,7 +107,6 @@ main {
     border-radius: 0.8rem;
     font-size: 1.4rem;
     font-weight: bold;
-    color: white;
 }
 
 .wrapper_input {
@@ -123,8 +122,8 @@ main {
     outline-color: gray;
     font-size: 1rem;
     padding-left: 1rem;
-    width: 10%;
     border-radius: .5rem;
+    width: 10%;
 }
 
 .input_text {
