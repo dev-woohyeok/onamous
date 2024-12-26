@@ -22,7 +22,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    background-color: purple;
+    background-color: navy;
     gap: 2rem;
     height: 200px
 }
