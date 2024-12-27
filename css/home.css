@@ -5,12 +5,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: "DungGeunMO";
-}
-
-@font-face {
-    font-family: "DungGeunMO";
-    src: url('/font/DungGeunMo.ttf');
 }
 
 main {
@@ -21,7 +15,6 @@ main {
 .nes-container {
     width: 1800px;
     height: 1000px;
-    top: 2%;
     left: 12%;
     border: none;
 }
