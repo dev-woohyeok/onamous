@@ -32,7 +32,7 @@ imageInput.addEventListener('change', function (event) {
 // 유효성 검사
 function validateInputs(userName, userMBTI, userGit, userBlog, userIntroduce) {
     const nameRegex = /^[가-힣]{1,5}$/; // 한글 1~5글자
-    const mbtiRegex = /^[A-Za-z]{4}$/; // 영문 4글자
+    const mbtiRegex = /^[A-Za-z]{4}$/; // 영문 4글자 대문자로 변환
     const urlRegex = /^(https?:\/\/)[^\s$.?#].[^\s]*$/; // URL 형식
 
     if (!nameRegex.test(userName)) {
