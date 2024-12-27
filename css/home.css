@@ -20,9 +20,9 @@ main {
 
 .nes-container {
     width: 1800px;
-    height: 800px;
-    top: 10%;
-    left: 10%;
+    height: 1000px;
+    top: 2%;
+    left: 12%;
     border: none;
 }
 
@@ -49,6 +49,7 @@ main {
 .nes-balloon p {
     font-size: 27px;
     color: black;
+    padding: 0.7rem;
 }
 
 #team-intro {
