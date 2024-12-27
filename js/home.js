@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (introIndex < introText.length) {
             introElement.textContent += introText[introIndex];
             introIndex++;
-            setTimeout(typeIntro, 100); // 글자 간격 100ms
+            setTimeout(typeIntro, 70); // 글자 간격 100ms
         } else {
-            setTimeout(typeDetail, 500); // 끝난 후 500ms 대기
+            setTimeout(typeDetail, 400); // 첫 말풍선 끝난 후 400ms 대기
         }
     }
 
