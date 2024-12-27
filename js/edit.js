@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const introduceField = document.getElementById('introduce');
     const submitButton = document.getElementById('signup-btn');
 
-
     // URL에서 쿼리스트링 읽기
     const params = new URLSearchParams(window.location.search);
     const userIndex = parseInt(params.get('index'), 10);
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userBlogField.value = editingUserData.blog || '';
         introduceField.value = editingUserData.introduce || '';
     } else {
-        console.warn('수정할 사용자 데이터가 없습니다.');
+        console.error('수정할 사용자 데이터가 없습니다.');
     }
 
     // 이미지 업로드 처리
@@ -55,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 유효성 검사 함수
     function validateInputs(name, mbti, git, blog, introduce) {
-        const nameRegex = /^[가-힣]{1,5}$/;
-        const mbtiRegex = /^[A-Za-z]{4}$/;
+        const nameRegex = /^[가-힣]{1,5}$/; // 정규표현식
+        const mbtiRegex = /^[A-Za-z]{4}$/; 
         const urlRegex = /^(https?:\/\/)[^\s$.?#].[^\s]*$/;
 
         if (!nameRegex.test(name)) {
@@ -81,10 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return true;
     }
-
+    
     // 데이터 저장
     submitButton.addEventListener('click', () => {
-        const updatedName = userNameField.value.trim();
+        const updatedName = userNameField.value.trim(); 
         const updatedMBTI = userMBTIField.value.trim();
         const updatedGit = userGitField.value.trim();
         const updatedBlog = userBlogField.value.trim();
@@ -111,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('userData', JSON.stringify(userData));
 
         alert('정보가 성공적으로 수정되었습니다.');
-        window.history.back(); //이전페이지 이동
+        window.history.back(); //이전페이지 이동 // 1234
     });
 });
 

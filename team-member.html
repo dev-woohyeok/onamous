@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>어몽어스 멤버 소개</title>
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/custom.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="/css/team-member.css">
+    <link rel="stylesheet" href="/css/details.css">
 </head>
 <body>
     <header class="header">
@@ -29,6 +31,33 @@
                 <a href="/signup.html"><button class="nes-btn is-primary">맴버 등록</button></a>
             </div>
             <div class="wrapper_card">
+            </div>
+        </div>
+        <div id="modal-notice" class="modal">
+            <div class="modal-content">
+                <a class="btn-close" onclick="closeModal()" href="#none">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+                <div class="modal-header">
+                    <div id="modal-inform">
+                        <img class="modal-image" src="#none">
+                        <h2 class="modal-name">이름</h2>
+                        <div class="modal-body">
+                            <h4 class="modal-mbti" >MBTI : </h4>
+                            <h4 class="modal-git" >Github : </h4>
+                            <h4 class="modal-blog" >Blog : </h4>
+                            <h4 class="modal-intro" >자기소개 : </h4>
+                        </div>
+                    </div>
+                    <div class="modal-btn">
+                        <button id="btn-delete" type="button" class="nes-btn is-primary" onclick="moveUpdate(event)">
+                            <i class="fa-solid fa-pen"></i> 수정
+                        </button>
+                        <button id="btn-update" type="button" class="nes-btn is-error" onclick="deleteModal(event)">
+                            <i class="fa-solid fa-trash-can"></i> 삭제
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

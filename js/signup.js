@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     imagePreview.style.display = 'block'; 
     imageInput.style.display = 'none'; 
 })
+
 // 이미지 업로드 이벤트
 imagePreview.addEventListener('click', () => {
     imageInput.click(); // 파일 선택

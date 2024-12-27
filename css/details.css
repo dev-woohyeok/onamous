@@ -9,16 +9,6 @@
     }
 }
 
-@font-face {
-    font-family:'DungGeunMo';
-    src: url('/font/DungGeunMo.ttf');
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'DungGeunMo';
-}
-
 .modal-header {
     text-align: center;
     justify-content: center;
@@ -33,12 +23,12 @@
     text-align: left;
 }
 
-.modal-btm {
+.modal-btn {
     display: flex;
     gap: 10px;
 }
 
-.modal-btm button {
+.modal-btn button {
     
     width: 100% 
 }
