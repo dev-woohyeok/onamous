@@ -74,7 +74,7 @@ header p {
 .nes-container {
     width: 1300px;
     height: 800px;
-    top: 5%;
+    top: 10%;
     left: 25%;
     border: none;
 }
@@ -85,37 +85,23 @@ header p {
     border-radius: 50%;
 }
 
-.nes-balloon p {
-    font-size: 27px;
-    /* 박스 상자속 텍스트 애니메이션 liner:처음부터 끝까지 일정한 속도로 진행 */
-    animation: slideup 12s linear;
-    /* 애니메이션이 완료된 후 요소는 마지막 상태(opacity: 1, margin-top: 0)를 유지한다.*/
-    animation-fill-mode: forwards;
+.nes-balloon::after,
+.nes-balloon::before {
+    display: none;
+    position: absolute;
+    content: "";
 }
 
-/* 애니메이션의 단계별 동작을 정의하는 규칙  opacity: 투명도 0:투명,1:불투명*/
-@keyframes slideup {
-    0% {
-        opacity: 0;
-        /* 요소가 아래로 50px 떨어져 있다. */
-        margin-top: 50px;
-    }
+.nes-balloon {
+    border: 4px solid navy;
+}
 
-    20% {
-        opacity: 1;
-        /* 요소가 위로 슬라이드되면서 제자리에 도달한다. */
-        margin-top: 0;
-    }
+.nes-balloon p {
+    font-size: 27px;
+}
 
-    80% {
-        opacity: 1;
-        /* 위치가 변하지 않고 유지된다. */
-        margin-top: 0;
-    }
-
-    100% {
-        opacity: 1;
-        /* 위치가 변하지 않고 유지된다. */
-        margin-top: 0;
-    }
+#team-intro {
+    font-size: 27px;
+    line-height: 1.5;
+    color: black;
 }
