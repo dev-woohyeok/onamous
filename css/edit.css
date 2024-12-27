@@ -1,6 +1,98 @@
-*{
-    
+@import "./node_modules/nes.css/css/nes.css";
+/* 공통 스타일 */
+* {
+    box-sizing: border-box;
+    font-family: 'DungGeunMo';
+    /* 박스의 사이즈 관리 프로퍼티 / 디폴트는 컨텐트박스 */
 }
-body{
+@font-face {
+    font-family: "DungGeunMo";         
+    src: url("/font/DungGeunMo.ttf"); 
+}
+.header{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    background-color: navy;
+    gap: 2rem;
+}
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://pbs.twimg.com/media/EiYSpYGUMAAa9K6?format=jpg&name=large');
+}
 
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 30px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#user_image {
+    display: none;
+}
+#image-preview {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 50px;
+    margin: 0px;
+    border: 1px solid black;
+}
+ul{
+    padding: 0;
+}
+.nes-field{
+    font-weight: bold;
+}
+
+/* 자기소개 */
+textarea {
+    width: 100%;
+    height: 120px;
+    font-weight: bold;
+}
+.nes-textarea{
+    resize: none;
+}
+textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+/* 버튼 */
+button.is-primary {
+    width: 100%;
+    font-size: 16px;
+}
+
+button.is-primary:hover {
+    background-color: #555;
 }

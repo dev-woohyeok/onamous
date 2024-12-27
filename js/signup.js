@@ -18,21 +18,21 @@ imageInput.addEventListener('change', function (event) {
     const file = event.target.files[0];
 
     if (file) {
-        //파일 이름 가져오기
-        const fileName = file.name;
-
-        // 이미지 미리보기 경로 설정
-        const filePath = `./image/${fileName}`; // image 폴더 경로
-        imagePreview.src = filePath; // 미리보기 이미지 업데이트
-        imagePreview.style.display = 'block'; // 이미지 표시
-        imageInput.style.display = 'none'; // 파일 선택 태그 숨김
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            //  이미지 데이터 저장
+            imagePreview.src = e.target.result; // 미리보기 이미지 업데이트
+            imagePreview.style.display = 'block'; // 이미지 표시
+            imageInput.style.display = 'none'; // 파일 선택 태그 숨김
+        };
+        reader.readAsDataURL(file); // 파일 읽기
     }
 });
 
 // 유효성 검사
 function validateInputs(userName, userMBTI, userGit, userBlog, userIntroduce) {
     const nameRegex = /^[가-힣]{1,5}$/; // 한글 1~5글자
-    const mbtiRegex = /^[A-Za-z]{4}$/; // 영문 4글자
+    const mbtiRegex = /^[A-Za-z]{4}$/; // 영문 4글자 대문자로 변환
     const urlRegex = /^(https?:\/\/)[^\s$.?#].[^\s]*$/; // URL 형식
 
     if (!nameRegex.test(userName)) {
@@ -114,5 +114,5 @@ submitButton.addEventListener('click', () => {
 
     alert('멤버로 등록되었습니다!');
 
-    resetInputs();
+    window.location.href = 'team-member.html';
 });

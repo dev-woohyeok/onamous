@@ -9,9 +9,15 @@ header {
 
 header div {
     display: flex;
-    width: 200px;
     justify-content: center;
     align-items: center;
+    padding: 0 2rem 0 2rem;
+}
+
+header img {
+    height: 60px;
+    width: 200px;
+    object-fit: fill;
 }
 
 header p {
@@ -19,7 +25,6 @@ header p {
     font-size: 2rem;
     font-weight: bold
 }
-
 
 .nav {
     display: flex;
@@ -30,25 +35,20 @@ header p {
     gap: 3rem;
 }
 
-.nav li {
+.nav a {
+    color: white;
     font-size: 1.5rem;
     font-weight: bold;
     border: .25rem solid white;
-    padding: .5rem  2rem .5rem 2rem;
+    padding: .7rem 2rem .7rem 2rem;
     border-radius: 1rem;
     background-color: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.nav a {
-    color: white
-}
-
-.nav li:hover {
+.nav a:hover {
     background-color: white;
-}
-
-.nav li:hover a {
     color: black;
 }
+

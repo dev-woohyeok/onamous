@@ -9,22 +9,24 @@
     <link rel="stylesheet" href="./css/board.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/custom.css">
     <title>Onamous</title>
 </head>
 <body>
     <header class="header">
         <div>
-            <p>오남어스</p>
+            <a href="/home.html">
+                <img src="/image/logo.png" alt="">
+            </a>
         </div>
         <ul class="nav">
             <li><a href="home.html">HOME</a></li>
-            <li><a href="signup.html">MEMBER</a></li>
+            <li><a href="team-member.html">MEMBER</a></li>
             <li><a href="board.html">BOARD</a></li>
         </ul>
     </header>
     <main>
         <div class="container">
+            <div class="title">방명록</div>
             <div class="post_list">
             </div>
             <div class="wrapper_btn">
@@ -32,8 +34,8 @@
                     <input id="writer" placeholder="작성자" type="text" class="input_writer" maxlength="8">
                     <input id="content" placeholder="내용" type="text" class="input_text" maxlength="100"/>
                 </div>
-                <button id="submit" onclick="data_create()" class="btn btn_write">작성</button>
-            </div>
+                <button id="submit" onclick="data_create()" class="nes-btn is-primary">작성</button>
+            </div>         
         </div>
     </main>
 </body>
