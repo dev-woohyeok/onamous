@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // URL에서 쿼리스트링 읽기
     const params = new URLSearchParams(window.location.search);
-    const userIndex = parseInt(params.get('index', 10));
+    const userIndex = parseInt(params.get('index'), 10);
 
     if(isNaN(userIndex)){
         alert('접근실패');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 로컬 스토리지에서 데이터 가져오기
     const userData = JSON.parse(localStorage.getItem('userData')) || [];
-    const editingUserData = userData[editingUserIndex];
+    const editingUserData = userData[userIndex];
 
     if (editingUserData) {
         // 기존 데이터 채우기
@@ -107,10 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // 기존 데이터 수정
-        userData[editingUserIndex] = updatedUserData;
+        userData[userIndex] = updatedUserData;
         localStorage.setItem('userData', JSON.stringify(userData));
 
         alert('정보가 성공적으로 수정되었습니다.');
-        window.location.href = 'team-member.html';
+        window.history.back(); //이전페이지 이동
     });
 });
+
+
