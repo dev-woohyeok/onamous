@@ -94,7 +94,7 @@ function data_read() {
 /**
  * 데이터 수정 함수
  * 특정 게시글 데이터를 수정할 수 있도록 입력 필드에 값을 채웁니다.
- * @param {Event} event - 클릭 이벤트
+ * @param {Event} event - 클릭 이벤트 
  */
 function data_update(event) {
     // 로컬 스토리지에서 데이터를 가져옵니다.
@@ -126,13 +126,10 @@ function data_delete(event) {
     const modal = document.getElementById('dialog-default')
     // 로컬 스토리지에서 데이터를 가져옵니다.
     let boards = data_read();
-
     // 해당 ID의 데이터를 제외한 나머지를 필터링합니다.
     boards = boards.filter((_, idx) => idx != id);
-
     // 변경된 데이터를 로컬 스토리지에 저장합니다.
     localStorage.setItem("boards", JSON.stringify(boards));
-
     // 화면을 다시 렌더링합니다.
     init();
 }
@@ -185,4 +182,4 @@ function create_post_element(parent, writer, content, idx) {
 
     // 부모 요소에 게시글 항목을 추가
     parent.appendChild(postItem);
-}
+} 
