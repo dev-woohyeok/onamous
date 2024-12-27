@@ -57,3 +57,7 @@ main {
     line-height: 1.5;
     color: black;
 }
+
+.hide {
+    display: none;
+}

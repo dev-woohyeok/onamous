@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function typeIntro() {
         if (introIndex < introText.length) {
+            introElement.parentElement.classList.remove("hide")
             introElement.textContent += introText[introIndex];
             introIndex++;
             setTimeout(typeIntro, 25); //한 글자가 출력될 때마다 setTimeout으로 딜레이를 줘 애니메이션 효과를 만듦
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function typeDetail(part) {
         if (charIndex < detailParts[part].length) {
+            detailElements[part].parentElement.classList.remove("hide")
             detailElements[part].textContent += detailParts[part][charIndex];
             charIndex++;
             setTimeout(() => typeDetail(part), 25);
