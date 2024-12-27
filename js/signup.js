@@ -20,9 +20,8 @@ imageInput.addEventListener('change', function (event) {
     if (file) {
         const reader = new FileReader();
         reader.onload = function (e) {
-            // Base64 형식으로 이미지 데이터 저장
-            const fileData = e.target.result;
-            imagePreview.src = fileData; // 미리보기 이미지 업데이트
+            //  이미지 데이터 저장
+            imagePreview.src = e.target.result; // 미리보기 이미지 업데이트
             imagePreview.style.display = 'block'; // 이미지 표시
             imageInput.style.display = 'none'; // 파일 선택 태그 숨김
         };
@@ -115,5 +114,5 @@ submitButton.addEventListener('click', () => {
 
     alert('멤버로 등록되었습니다!');
 
-    window.location.href = 'home.html';
+    window.location.href = 'team-member.html';
 });

@@ -44,14 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const file = event.target.files[0];
 
         if (file) {
-            //파일 이름 가져오기
-            const fileName = file.name;
-
-            // 이미지 미리보기 경로 설정
-            const filePath = `./image/${fileName}`; // image 폴더 경로
-            imagePreview.src = filePath; // 미리보기 이미지 업데이트
-            imagePreview.style.display = 'block'; // 이미지 표시
-            imageInput.style.display = 'none'; // 파일 선택 태그 숨김
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                imagePreview.src = e.target.result; //  업데이트
+                imagePreview.style.display = 'block'; // 이미지 표시
+            };
+            reader.readAsDataURL(file);
         }
     });
 
@@ -113,6 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('userData', JSON.stringify(userData));
 
         alert('정보가 성공적으로 수정되었습니다.');
-        window.location.reload(); // 페이지 새로고침
+        window.location.href = 'team-member.html';
     });
 });
