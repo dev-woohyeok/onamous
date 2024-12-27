@@ -1,3 +1,8 @@
+@font-face {
+    font-family:'DungGeunMo';
+    src: url('/font/DungGeunMo.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;

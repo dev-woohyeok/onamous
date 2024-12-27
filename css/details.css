@@ -9,8 +9,14 @@
     }
 }
 
+@font-face {
+    font-family:'DungGeunMo';
+    src: url('/font/DungGeunMo.ttf');
+}
+
 * {
     box-sizing: border-box;
+    font-family: 'DungGeunMo';
 }
 
 .modal-header {
@@ -33,6 +39,7 @@
 }
 
 .modal-btm button {
+    
     width: 100% 
 }
 
