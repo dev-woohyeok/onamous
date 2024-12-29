@@ -100,15 +100,6 @@ function data_update(event) {
         return;
     }
 
-    // 데이터 채우기
-    modalInform.querySelector('h2').textContent = userData[id].name;
-    modalInform.querySelector('.modal-body h4:nth-child(1)').textContent = `MBTI: ${userData[id].mbti}`;
-    modalInform.querySelector('.modal-body h4:nth-child(2)').textContent = `Github: ${userData[id].git}`;
-    modalInform.querySelector('.modal-body h4:nth-child(3)').textContent = `Blog: ${userData[id].blog}`;
-    modalInform.querySelector('.modal-body h4:nth-child(4)').textContent = `자기소개: ${userData[id].introduce}`;
-    modalInform.querySelector('img').src = userData[id].image;
-
-    console.log(modalInform.querySelector('h2'));
     // 모달 열기
     openModal();
 }
