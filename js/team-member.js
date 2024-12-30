@@ -10,7 +10,7 @@ function init() {
     const memberList = document.querySelector(".wrapper_card"); // 카드 리스트 요소 가져오기
 
     memberList.innerHTML = ""; // 기존 리스트 초기화
-
+    // [{}, {}, {}]
     members.forEach((member, idx) => {
         createCardElement(memberList, member, idx); // 카드 요소 생성 및 추가
     });
@@ -59,10 +59,12 @@ function updateModal(user) {
     modalbtn.dataset.id = user.index;
     modalImg.src = user.image;
     modalName.textContent = user.name;
-    modalMBTI.textContent = `MBTI : ${user.mbti}`;
-    modalGit.textContent = `Github : ${user.git}`;
-    modalBlog.textContent = `Blog : ${user.blog}`;
-    modalIntro.textContent = `자기소개 : ${user.introduce}`;
+    modalMBTI.textContent = `${user.mbti}`;
+    modalGit.textContent = `${user.git}`;
+    modalGit.href = user.git;
+    modalBlog.textContent = `${user.blog}`;
+    modalBlog.href = user.blog
+    modalIntro.textContent = `${user.introduce}`;
 
     // 모달 활성화
     const modal = document.getElementById('modal-notice');

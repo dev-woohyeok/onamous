@@ -30,25 +30,23 @@
                 <a class="btn-close" onclick="closeModal()" href="#none">
                     <i class="fa-solid fa-xmark"></i>
                 </a>
-                <div class="modal-header">
-                    <div id="modal-inform">
-                        <img src="#none">
-                        <h2>이름</h2>
-                        <div class="modal-body">
-                            <h4>MBTI : </h4>
-                            <h4>Github : </h4>
-                            <h4>Blog : </h4>
-                            <h4>자기소개 : </h4>
-                        </div>
+                <div id="modal-inform">
+                    <img id="modal-img" src="/경로">
+                    <h2>이름</h2>
+                    <div class="modal-body">
+                        <h4>MBTI : </h4>
+                        <h4>Github : </h4>
+                        <h4>Blog : </h4>
+                        <h4>자기소개 : </h4>
                     </div>
-                    <div class="modal-btm">
-                        <button type="button" class="nes-btn is-primary">
-                            <i class="fa-solid fa-pen"></i> 수정
-                        </button>
-                        <button type="button" class="nes-btn is-error" onclick="data_delete(event)">
-                            <i class="fa-solid fa-trash-can"></i> 삭제
-                        </button>
-                    </div>
+                </div>
+                <div class="modal-btm">
+                    <button type="button" class="nes-btn is-primary">
+                        <i class="fa-solid fa-pen"></i> 수정
+                    </button>
+                    <button type="button" class="nes-btn is-error" onclick="data_delete(event)">
+                        <i class="fa-solid fa-trash-can"></i> 삭제
+                    </button>
                 </div>
             </div>
         </div>
